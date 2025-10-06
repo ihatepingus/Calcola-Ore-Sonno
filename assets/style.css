@@ -8,7 +8,6 @@
   --input-border: #ced4da;
   --label-color: #212529;
 }
-
 [data-theme="dark"] {
   --bg-gradient-start: #1a1a2e;
   --bg-gradient-end: #16213e;
@@ -19,7 +18,6 @@
   --input-border: #4a5568;
   --label-color: #e8e8e8;
 }
-
 body {
   background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
   min-height: 100vh;
@@ -34,26 +32,22 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-
 .form-control {
   background-color: var(--input-bg);
   color: var(--input-text);
   border-color: var(--input-border);
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-
 .form-control:focus {
   background-color: var(--input-bg);
   color: var(--input-text);
   border-color: #667eea;
   box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
 }
-
 .form-label {
   color: var(--label-color);
   transition: color 0.3s ease;
 }
-
 .result-card {
   margin-top: 2rem;
   padding: 2rem;
@@ -62,7 +56,6 @@ body {
   border: 2px solid rgba(102, 126, 234, 0.2);
   display: none;
 }
-
 .result-card.show {
   display: block;
   animation: slideIn 0.5s ease;
@@ -78,21 +71,18 @@ body {
     transform: translateY(0);
   }
 }
-
 .hours-display {
   font-size: 3rem;
   font-weight: bold;
   color: #667eea;
   margin-top: 1rem;
 }
-
 .btn-primary {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   padding: 0.75rem 2rem;
   font-weight: bold;
 }
-
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
@@ -110,7 +100,30 @@ body {
   font-size: 0.75rem;
 }
 
-/* Theme and Language Toggle Buttons */
+.home-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1000;
+}
+.home-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 .theme-toggle,
 .language-toggle {
   position: fixed;
@@ -127,55 +140,43 @@ body {
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 .theme-toggle {
   right: 20px;
   background: #ffffff;
   border: 2px solid #e0e0e0;
 }
-
 .language-toggle {
   left: 20px;
   background: #fff;
   border: 2px solid #e0e0e0;
 }
-
 .theme-toggle:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
 .language-toggle:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-
 .theme-toggle i {
   font-size: 1.2rem;
   position: absolute;
   transition: opacity 0.3s ease;
 }
-
-/* Assicurati che anche gli SVG di Font Awesome siano colorati */
 .theme-toggle svg {
   font-size: 1.2rem;
   position: absolute;
   transition: opacity 0.3s ease;
 }
-
-/* Light mode - icone scure */
 body:not(.dark-mode) .theme-toggle i,
 body:not(.dark-mode) .theme-toggle svg {
   color: #333333;
   fill: #333333;
 }
-
-/* Dark mode - icone chiare */
 body.dark-mode .theme-toggle {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
 }
-
 body.dark-mode .theme-toggle i,
 body.dark-mode .theme-toggle svg {
   color: #f0f0f0;
@@ -191,78 +192,62 @@ body.dark-mode .theme-toggle svg {
   transition: opacity 0.3s ease;
 }
 
-/* Theme states */
 body:not(.dark-mode) .sun-icon {
   opacity: 1;
 }
-
 body:not(.dark-mode) .moon-icon {
   opacity: 0;
 }
-
 body.dark-mode .sun-icon {
   opacity: 0;
 }
-
 body.dark-mode .moon-icon {
   opacity: 1;
 }
-
-/* Dark mode styles */
 body.dark-mode {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: #e0e0e0;
 }
-
 body.dark-mode .card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #e0e0e0;
 }
-
 body.dark-mode .form-control {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
   color: #e0e0e0;
 }
-
 body.dark-mode .form-control:focus {
   background: rgba(255, 255, 255, 0.15);
   border-color: #667eea;
   color: #e0e0e0;
 }
-
 body.dark-mode .form-label {
   color: #b0b0b0;
 }
-
 body.dark-mode .result-card {
   background: rgba(102, 126, 234, 0.1);
   border-color: rgba(102, 126, 234, 0.3);
 }
-
 body.dark-mode .language-toggle {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Footer Styles */
 .footer {
   padding: 2rem 0 3rem;
   margin-top: 4rem;
 }
-
 .footer-content {
   color: #ffffff;
 }
-
 .footer-disclaimer {
   font-size: 1rem;
   font-weight: 500;
   opacity: 0.9;
   line-height: 1.6;
 }
-
 .footer-links {
   margin: 1.5rem 0;
   display: flex;
@@ -270,7 +255,6 @@ body.dark-mode .language-toggle {
   justify-content: center;
   align-items: center;
 }
-
 .footer-links a {
   display: inline-flex;
   align-items: center;
@@ -286,7 +270,6 @@ body.dark-mode .language-toggle {
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
-
 .footer-links a:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.5);
@@ -294,44 +277,35 @@ body.dark-mode .language-toggle {
   transform: translateY(-3px) scale(1.1);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 .footer-links a i {
   font-size: 1.5rem;
 }
-
 .footer-copyright {
   font-size: 0.9rem;
   opacity: 0.8;
   color: #ffffff;
   margin-bottom: 0;
 }
-
 .footer-copyright i {
   margin: 0 0.25rem;
 }
-
-/* Dark mode footer */
 body.dark-mode .footer-content {
   color: #e0e0e0;
 }
-
 body.dark-mode .footer-links a {
   background: rgba(102, 126, 234, 0.2);
   border-color: rgba(102, 126, 234, 0.4);
   color: #e0e0e0;
 }
-
 body.dark-mode .footer-links a:hover {
   background: rgba(102, 126, 234, 0.3);
   border-color: rgba(102, 126, 234, 0.6);
   color: #ffffff;
 }
-
 body.dark-mode .footer-copyright {
   color: #b0b0b0;
 }
 
-/* Media query per mobile */
 @media (max-width: 768px) {
   .container {
     margin-top: 2rem;
@@ -346,15 +320,12 @@ body.dark-mode .footer-copyright {
     height: 45px;
     top: 15px;
   }
-
   .theme-toggle {
     right: 15px;
   }
-
   .language-toggle {
     left: 15px;
   }
-
   .flag-icon {
     width: 24px;
     height: 24px;
@@ -363,30 +334,20 @@ body.dark-mode .footer-copyright {
   .footer {
     padding: 1.5rem 0 2rem;
   }
-
   .footer-disclaimer {
     font-size: 0.9rem;
   }
-
   .footer-links {
     gap: 0.5rem;
   }
-
   .footer-links a {
     width: 40px;
     height: 40px;
     font-size: 1.1rem;
   }
-
   .footer-links a i {
     font-size: 1.1rem;
   }
-
-  .github-link {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-  }
-
   .footer-copyright {
     font-size: 0.85rem;
   }

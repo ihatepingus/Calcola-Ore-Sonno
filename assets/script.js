@@ -182,6 +182,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const bedDate = document.getElementById('bedDate').value;
     document.getElementById('wakeDate').setAttribute('min', bedDate);
   });
+
+  document.getElementById('l').addEventListener('click', function() {
+    window.location.href = 'trapano';
+  });
 });
 
 const translations = {
