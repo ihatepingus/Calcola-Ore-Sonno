@@ -1,0 +1,8 @@
+.dockerignore
+.gitignore
+Dockerfile
+compose.yaml
+README.md
+.idea/
+.vscode/
+.DS_Store
