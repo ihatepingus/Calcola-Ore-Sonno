@@ -1,0 +1,10 @@
+name: calcola-ore
+
+services:
+  calcola-ore:
+    image: calcola-ore
+    build: .
+    container_name: calcola-ore
+    ports:
+      - 5555:80
+    restart: unless-stopped

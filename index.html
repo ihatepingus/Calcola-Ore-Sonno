@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcola Ore di Sonno</title>
+  <link rel="icon" type="image/icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- Toast Container -->
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="fas fa-exclamation-circle"></i> <span id="toastMessage"></span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-sun sun-icon"></i>
+    <i class="fas fa-moon moon-icon"></i>
+  </button>
+
+  <!-- Language Toggle Button -->
+  <button id="languageToggle" class="language-toggle" aria-label="Toggle language">
+    <img id="flag" src="assets/it.svg" alt="Flag" class="flag-icon">
+  </button>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card">
+          <div class="card-body p-4">
+            <h1 class="text-center mb-4">
+              <i class="fas fa-moon text-primary"></i>
+              Calcola ore di sonno
+            </h1>
+
+            <form id="sleepForm">
+              <!-- Orario di andata a dormire -->
+              <div class="mb-4">
+                <label for="bedDate" class="form-label">
+                  <i class="fas fa-bed"></i> Data di andata a dormire
+                </label>
+                <input type="date" class="form-control" id="bedDate" required>
+              </div>
+
+              <div class="mb-4">
+                <label for="bedTime" class="form-label">
+                  <i class="fas fa-clock"></i> Orario di andata a dormire (ora)
+                </label>
+                <input type="number" class="form-control" id="bedTime" min="0" max="23" required>
+              </div>
+
+              <!-- Orario di sveglia -->
+              <div class="mb-4">
+                <label for="wakeDate" class="form-label">
+                  <i class="fas fa-sun"></i> Data di sveglia
+                </label>
+                <input type="date" class="form-control" id="wakeDate" required>
+              </div>
+
+              <div class="mb-4">
+                <label for="wakeTime" class="form-label">
+                  <i class="fas fa-alarm-clock"></i> Orario di sveglia (ora)
+                </label>
+                <input type="number" class="form-control" id="wakeTime" min="0" max="23" required>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fas fa-calculator"></i> Calcola Ore di Sonno
+                </button>
+              </div>
+            </form>
+
+            <!-- Risultato -->
+            <div id="result" class="result-card">
+              <div class="text-center">
+                <h3><i class="fas fa-moon"></i> Durata del Sonno</h3>
+                <div class="hours-display" id="hoursDisplay">0 ore</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 text-center">
+          <div class="footer-content">
+            <div class="footer-links">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="footer-copyright mt-3">
+              <span id="footerMade">Made with</span> <i class="fas fa-heart text-danger"></i> by Labubu
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
