@@ -313,6 +313,9 @@ body.dark-mode .footer-copyright {
   .hours-display {
     font-size: 2rem;
   }
+  .wrapper {
+    margin-top: 2rem;
+  }
 
   .theme-toggle,
   .language-toggle {
