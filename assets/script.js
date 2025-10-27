@@ -183,8 +183,11 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('wakeDate').setAttribute('min', bedDate);
   });
 
-  document.getElementById('l').addEventListener('click', function() {
+  document.getElementById('t').addEventListener('click', function() {
     window.location.href = 'trapano';
+  });
+  document.getElementById('s').addEventListener('click', function() {
+    window.location.href = 'shampoo';
   });
 });
 
